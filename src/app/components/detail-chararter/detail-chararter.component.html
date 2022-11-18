@@ -1,0 +1,19 @@
+<section class="box">
+    <img src="{{personaje.img}}"  width="180" alt="" class="box-img">    
+    <h1>{{personaje.nombre}}</h1>
+    <p>{{personaje.especie}} / {{personaje.estado}} / {{personaje.origen.name}} / {{personaje.location}}</p>
+    <div class="scroll">
+        <table class="table mt-3 scroll">
+            <thead>
+                <th scope="col">NOMBRE EPISODIO</th>
+                <th scope="col">FECHA EPISODIO</th>
+            </thead>
+            <tbody>
+                <tr *ngFor="let character of personaje.episodes">
+                    <td>{{character.name}}</td>
+                    <td>{{character.fecha}}</td>
+                </tr>
+            </tbody>
+        </table>    
+    </div>   
+</section>
